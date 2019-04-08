@@ -39,16 +39,4 @@ public class HelloTest {
         String goal = Hello.HELLO + "\n" + Hello.HELLO + "\n" + Hello.HELLO + "\n";
         assertThat(os.toString(), is(equalTo(goal)));
     }
-
-    @Test(expected = IllegalArgumentException.class)
-    public void testIllegalArgumentForHello21() {
-        Hello hi = new Hello();
-        hi.setTimes(Hello.MAXIMUM_AMOUNT_OF_TIMES + 1);
-    }
-
-    @Test(expected = IllegalArgumentException.class)
-    public void testIllegalArgumentForHelloNegative() {
-        Hello hi = new Hello();
-        hi.setTimes(-1);
-    }
 }
